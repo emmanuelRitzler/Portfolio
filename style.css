@@ -1,0 +1,110 @@
+* {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: PixelOperator;
+    src: url(Fonts/PixelOperator.ttf);
+}
+
+@font-face {
+    font-family: RetroGaming;
+    src: url(Fonts/Retro\ Gaming.ttf);
+}
+
+/* HEADER */
+
+header {
+    width: auto;
+    height: 100px;
+    border-bottom: 2px rgba(153, 153, 153, 0.514) solid;
+    padding: 0px 40px;
+    box-shadow: 0px 2px 10px rgba(155, 155, 155, 0.362);
+}
+
+header img {
+    height: 80px;
+    width: 80px;
+    object-fit: contain;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    font-family: PixelOperator, sans-serif;
+}
+
+nav li {
+    padding: 0px 20px;
+    font-size: 1.4rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+
+/* MAIN BANNER */
+
+.banner-hero {
+    text-align: center;
+    margin: 100px 0px;
+}
+
+.banner-hero h1 {
+    font-family: RetroGaming, sans-serif;
+    font-size: 4rem;
+    margin-bottom: 60px;
+}
+
+.banner-hero h2 {
+    font-family: PixelOperator, sans-serif;
+    font-size: 2.5rem;
+}
+
+/* Press Start */
+
+.black-stripe {
+    width: auto;
+    height: 300px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    text-align: center;
+	background: #7C7C7C;
+	border-bottom: 6px inset rgba(0,0,0,.5);
+	border-left: 6px inset rgba(0,0,0,.5);
+	border-right: 6px inset rgba(255,255,255,.5);
+	border-top: 6px inset rgba(255,255,255,.5);
+	box-sizing: border-box;
+	color: white;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 2.2rem;
+	margin: 1rem;
+	min-width: 200px;
+	padding: .5rem;
+	text-transform: uppercase;
+	width: auto;
+	
+	&:focus,
+	&:hover {
+		background: #BCBCBC;
+	}
+}
+
+.btn h3 {
+
+}
