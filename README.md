@@ -1,5 +1,5 @@
 # Portfolio
-My personal portfolio project, written with HTML, CSS and a bit of JS :)
+My personal portfolio project, written with HTML and CSS :)
 
 This project is dedicated for recruiters and generaly people that want to work with me!
 
