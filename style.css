@@ -70,10 +70,14 @@ nav a {
     display: none;
 }
 
+#checkbox {
+    display: none;
+}
+label {
+    display: none;
+}
+
 @media only screen and (max-width: 425px) {
-    header ul {
-        display: none;
-    }
     header img {
         height: 60px;
         width: 60px;
@@ -89,6 +93,49 @@ nav a {
     }
     header.menu {
         padding: 0 30px;
+    }
+    nav {
+        position: absolute;
+        background-color: rgb(0, 0, 0);
+        top: 100px;
+        left: 0;
+        width: 100%;
+
+    }
+    nav ul {
+        display: inline;
+        list-style-type: none;
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.5s;
+    }
+    nav ul li {
+        padding: 0 15px;
+    }
+    nav a {
+        display: inline-block;
+        height: auto;
+        width: 100%;
+        padding: 12px;
+        color: lightgray;
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+            color: rgb(144, 144, 144);
+        }
+    }
+    #checkbox {
+        display: none;
+    }
+    #checkbox:checked ~ nav ul {
+        max-height: 200px;
+        padding: 15px 0;
+        transition: all 0.5s;
+        margin-bottom: 20px;
+    }
+    label {
+        display: flex;
     }
 } 
 
@@ -207,7 +254,7 @@ nav a {
 /* FOOTER */
 
 footer h3 {
-    margin-top: 180px;
+    margin-top: 260px;
     text-align: center;
     font-family: PixelOperator, sans-serif;
     font-size: 1.2rem;
@@ -228,6 +275,6 @@ footer h3 {
 
 @media only screen and (max-width: 425px) {
     footer h3 {
-        margin-top: 160px;
+        margin-top: 220px;
     }
 }
