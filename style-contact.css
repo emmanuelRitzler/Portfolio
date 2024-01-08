@@ -202,12 +202,12 @@ nav a {
 
 @media only screen and (min-width: 426px) and (max-width: 768px) {
     .banner-hero h1 {
-        font-size: 1.6rem;
         font-size: 3.2rem;
+        max-width: 100%;
     }
     .banner-hero h2 {
-        font-size: 0.9rem;
         font-size: 1.8rem;
+        max-width: 100%;
     }
 }
 
@@ -217,12 +217,12 @@ nav a {
         max-height: 320px;
     }
     .banner-hero h1 {
-        font-size: 3.2rem;
         font-size: 2rem;
+        max-width: 100%;
     }
     .banner-hero h2 {
-        font-size: 2rem;
         font-size: 1.1rem;
+        max-width: 100%;
     }
 }
 
@@ -234,9 +234,11 @@ nav a {
     }
     .banner-hero h1 {
         font-size: 1.8rem;
+        max-width: 100%;
     }
     .banner-hero h2 {
         font-size: 1rem;
+        max-width: 100%;
     }
 }
 
@@ -247,9 +249,11 @@ nav a {
     }
     .banner-hero h1 {
         font-size: 1.6rem;
+        max-width: 100%;
     }
     .banner-hero h2 {
         font-size: 0.9rem;
+        max-width: 100%;
     }
 }
 
