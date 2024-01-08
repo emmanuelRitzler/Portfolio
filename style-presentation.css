@@ -1,0 +1,342 @@
+* {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: PixelOperator;
+    src: url(Fonts/PixelOperator.ttf);
+}
+
+@font-face {
+    font-family: RetroGaming;
+    src: url(Fonts/Retro\ Gaming.ttf);
+}
+
+/* HEADER */
+
+header.menu {
+    width: auto;
+    height: 100px;
+    border-bottom: 2px rgba(188, 188, 188, 0.241) solid;
+    padding: 0px 50px;
+    box-shadow: 0px 2px 10px rgba(177, 176, 176, 0.204);
+}
+
+.menu-wrap {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img {
+    height: 80px;
+    width: 80px;
+    object-fit: contain;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    font-family: PixelOperator, sans-serif;
+}
+
+nav li {
+    padding-left: 40px;
+    font-size: 1.4rem;
+}
+
+nav a {
+    height: 100px;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+        color: rgb(144, 144, 144);
+    }
+}
+
+.menu-icon {
+    display: none;
+}
+
+#checkbox {
+    display: none;
+}
+label {
+    display: none;
+}
+
+@media only screen and (max-width: 425px) {
+    header img {
+        height: 60px;
+        width: 60px;
+    }
+    .menu-icon {
+        display: flex;
+        font-size: 2.6rem;
+        align-items: center;
+    }
+    .logo-img {
+        display: flex;
+        align-items: center;
+    }
+    header.menu {
+        padding: 0 30px;
+    }
+    nav {
+        position: absolute;
+        background-color: rgb(0, 0, 0);
+        top: 100px;
+        left: 0;
+        width: 100%;
+    }
+    nav ul {
+        display: inline;
+        list-style-type: none;
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.5s;
+    }
+    nav ul li {
+        padding: 0 15px;
+    }
+    nav a {
+        display: inline-block;
+        height: auto;
+        width: 100%;
+        padding: 12px;
+        color: lightgray;
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+            color: rgb(144, 144, 144);
+        }
+    }
+    #checkbox {
+        display: none;
+    }
+    #checkbox:checked ~ nav ul {
+        max-height: 200px;
+        padding: 15px 0;
+        transition: all 0.5s;
+        margin-bottom: 20px;
+    }
+    label {
+        display: flex;
+    }
+} 
+
+
+/* MAIN BANNER */
+
+.banner-hero {
+    text-align: center;
+    margin: 100px 0px 60px 0px;
+}
+
+.banner-hero h1 {
+    font-family: RetroGaming, sans-serif;
+    font-size: 3.8rem;
+    margin-bottom: 60px;
+}
+
+.banner-hero h2 {
+    font-family: PixelOperator, sans-serif;
+    font-size: 2.5rem;
+    width: auto;
+    display: inline-block;
+}
+
+.typewriter {
+    display: inline-block;
+}
+
+.typewriter h2 {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid rgb(0, 0, 0); /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 2.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+}
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: black; }
+}
+
+@media only screen and (max-width: 425px) {
+    .banner-hero h1 {
+        font-size: 3rem;
+    }
+    .banner-hero h2 {
+        font-size: 2rem;
+    }
+}
+
+/* PRESENTATION */
+
+.presentation {
+    margin: 0 auto;
+}
+
+.text-presentation {
+    display: flex;
+    justify-content: center;
+}
+
+.presentation p {
+    font-family: PixelOperator, sans-serif;
+    font-size: 1.2rem;
+    color: black;
+    padding: 60px 0px 30px 0px;
+    max-width: 500px;
+    text-align: justify;
+}
+
+.photo-banner {
+    display: flex;
+    justify-content: center;
+}
+
+.photo-banner img {
+    height: 400px;
+    width: 400px;
+    margin: 0 auto;
+}
+
+@media only screen and (min-width: 376px) and (max-width: 425px) {
+    .presentation p {
+        font-size: 0.7;
+        max-width: 280px;
+        padding: 50px 0px 10px 0px;
+    }
+}
+
+@media only screen and (min-width: 321px) and (max-width: 375px) {
+    .presentation p {
+        font-size: 0.7;
+        max-width: 280px;
+        padding: 50px 0px 10px 0px;
+    }
+    .photo-banner img {
+        height: 320px;
+        width: 320px;
+    }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 320px) {
+    .presentation p {
+        font-size: 0.7;
+        max-width: 240px;
+        padding: 50px 0px 10px 0px;
+    }
+    .photo-banner img {
+        height: 280px;
+        width: 280px;
+    }
+}
+
+/* ACTION BUTTON */
+
+.black-stripe {
+    width: auto;
+    height: 220px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.black-stripe img {
+    width: 320px;
+}
+
+.btn {
+    text-align: center;
+    font-family: PixelOperator, sans-serif;
+	background: #7C7C7C;
+	border-bottom: 6px inset rgba(0,0,0,.5);
+	border-left: 6px inset rgba(0,0,0,.5);
+	border-right: 6px inset rgba(255,255,255,.5);
+	border-top: 6px inset rgba(255,255,255,.5);
+	box-sizing: border-box;
+	color: white;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 4.2rem;
+	margin: 1rem;
+	min-width: 200px;
+	padding: .5rem;
+	text-transform: uppercase;
+	width: auto;
+	
+	&:focus,
+	&:hover {
+		background: #BCBCBC;
+	}
+}
+
+.btn h3 {
+    font-size: 1.5rem;
+}
+
+.btn a {
+    text-decoration: none;
+    color: white;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+/* FOOTER */
+
+footer h3 {
+    margin-top: 260px;
+    text-align: center;
+    font-family: PixelOperator, sans-serif;
+    font-size: 1.2rem;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.social-icons img {
+    height: 80px;
+    width: 80px;
+    margin-top: 10px;
+    padding: 20px;
+}
+
+@media only screen and (max-width: 425px) {
+    footer h3 {
+        margin-top: 220px;
+    }
+}
