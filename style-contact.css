@@ -221,13 +221,12 @@ nav a {
         max-width: 100%;
     }
     .banner-hero h2 {
-        font-size: 1rem;
+        font-size: 1.4rem;
         max-width: 100%;
         word-wrap:normal;
     }
 }
 
-/* Press Start */
 @media only screen and (min-width: 321px) and (max-width: 375px) {
     .gif {
         max-width: 100%;
@@ -238,7 +237,7 @@ nav a {
         max-width: 100%;
     }
     .banner-hero h2 {
-        font-size: 0.9rem;
+        font-size: 1.3rem;
         max-width: 100%;
     }
 }
@@ -253,12 +252,12 @@ nav a {
         max-width: 100%;
     }
     .banner-hero h2 {
-        font-size: 0.8rem;
+        font-size: 1.2rem;
         max-width: 100%;
     }
 }
 
-/* Press Start */
+/* ACTION BUTTON */
 .black-stripe {
     width: auto;
     height: 220px;
