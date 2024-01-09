@@ -143,7 +143,7 @@ label {
 
 .banner-hero {
     text-align: center;
-    margin: 100px 0px 30px 0px;
+    margin: 100px 0px 50px 0px;
 }
 
 .banner-hero h1 {
@@ -195,67 +195,94 @@ label {
     }
 }
 
-/* PRESENTATION */
+/* LOGOS */
 
-.presentation {
-    margin: 0 auto;
-}
-
-.text-presentation {
+.technologies {
     display: flex;
     justify-content: center;
+    margin-bottom: 60px;
 }
 
-.presentation p {
-    font-family: PixelOperator, sans-serif;
-    font-size: 1.2rem;
-    color: black;
-    padding: 60px 0px 30px 0px;
-    max-width: 500px;
-    text-align: justify;
-}
-
-.photo-banner {
+.logos {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    max-width: 620px;
 }
 
-.photo-banner img {
-    height: 400px;
-    width: 400px;
-    margin: 0 auto;
+.logos img {
+    height: 90px;
+    width: 90px;
+    margin: 20px;
 }
 
 @media only screen and (min-width: 376px) and (max-width: 425px) {
-    .presentation p {
-        font-size: 0.7;
-        max-width: 280px;
-        padding: 50px 0px 10px 0px;
+    .logos {
+        max-width: 340px;
     }
 }
 
-@media only screen and (min-width: 321px) and (max-width: 375px) {
-    .presentation p {
-        font-size: 0.7;
-        max-width: 280px;
-        padding: 50px 0px 10px 0px;
-    }
-    .photo-banner img {
-        height: 320px;
-        width: 320px;
-    }
+/* CV */
+
+.cv {
+    display: flex;
+    justify-content: center;
 }
 
-@media only screen and (min-width: 0px) and (max-width: 320px) {
-    .presentation p {
-        font-size: 0.7;
-        max-width: 240px;
-        padding: 50px 0px 10px 0px;
+.school {
+    display: inline-block;
+    max-width: 620px;
+}
+
+.school h3 {
+    font-family: PixelOperator, sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.btn-cv {
+    text-align: center;
+    font-family: RetroGaming, sans-serif;
+	background: #ffffff;
+	border-bottom: 6px inset rgba(0,0,0,.5);
+	border-left: 6px inset rgba(0,0,0,.5);
+	border-right: 6px inset rgba(226, 226, 226, 0.5);
+	border-top: 6px inset rgba(255,255,255,.5);
+	box-sizing: border-box;
+	color: white;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 4rem;
+	margin: 1rem;
+	min-width: 200px;
+	padding: 3rem;
+	text-transform: uppercase;
+	width: auto;
+	
+	&:focus,
+	&:hover {
+		background: #BCBCBC;
+	}
+}
+
+.btn-cv h4 {
+    font-size: 1.8rem;
+}
+
+.btn-cv a {
+    text-decoration: none;
+    color: black;
+}
+
+@media only screen and (max-width: 425px) {
+    .btn-cv h4 {
+    font-size: 1.3rem;
     }
-    .photo-banner img {
-        height: 280px;
-        width: 280px;
+    .school h3 {
+        font-size: 2rem;
     }
+
 }
 
 /* ACTION BUTTON */
@@ -297,7 +324,7 @@ label {
 .button-container {
     display: flex;
     justify-content: center;
-    margin-top: 30px;
+    margin-top: 60px;
 }
 
 /* FOOTER */
