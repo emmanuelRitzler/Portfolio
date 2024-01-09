@@ -223,6 +223,7 @@ nav a {
     .banner-hero h2 {
         font-size: 1rem;
         max-width: 100%;
+        word-wrap:normal;
     }
 }
 
