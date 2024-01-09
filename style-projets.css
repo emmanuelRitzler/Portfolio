@@ -128,7 +128,7 @@ label {
         display: none;
     }
     #checkbox:checked ~ nav ul {
-        max-height: 200px;
+        max-height: 240px;
         padding: 15px 0;
         transition: all 0.5s;
         margin-bottom: 20px;
@@ -143,7 +143,7 @@ label {
 
 .banner-hero {
     text-align: center;
-    margin: 100px 0px;
+    margin: 100px 0px 50px 0px;
 }
 
 .banner-hero h1 {
