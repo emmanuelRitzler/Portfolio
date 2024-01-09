@@ -128,7 +128,7 @@ label {
         display: none;
     }
     #checkbox:checked ~ nav ul {
-        max-height: 250px;
+        max-height: 260px;
         padding: 15px 0;
         transition: all 0.5s;
         margin-bottom: 20px;
@@ -241,6 +241,29 @@ label {
     margin-bottom: 60px;
 }
 
+.cv-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cv-grid {
+    display: grid;
+    grid-template-columns: 360px;
+    grid-template-rows: 75% 25%;
+    border: 2px rgba(0, 0, 0, 0) solid;
+    align-items: center;
+    justify-content: center;
+}
+
+.cv-grid img {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
 .btn-cv {
     text-align: center;
     font-family: RetroGaming, sans-serif;
@@ -253,10 +276,10 @@ label {
 	color: white;
 	cursor: pointer;
 	display: inline-block;
-	font-size: 4rem;
+	font-size: 2rem;
 	margin: 1rem;
 	min-width: 200px;
-	padding: 3rem;
+	padding: 1.5rem;
 	text-transform: uppercase;
 	width: auto;
 	
@@ -267,12 +290,14 @@ label {
 }
 
 .btn-cv h4 {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
 }
 
 .btn-cv a {
     text-decoration: none;
     color: black;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
 }
 
 @media only screen and (max-width: 425px) {
@@ -281,6 +306,12 @@ label {
     }
     .school h3 {
         font-size: 2rem;
+    }
+    .cv-grid {
+    grid-template-columns: 300px;
+    }
+    .btn-cv {
+        padding: 1rem;
     }
 
 }
