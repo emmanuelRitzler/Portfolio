@@ -128,7 +128,7 @@ label {
         display: none;
     }
     #checkbox:checked ~ nav ul {
-        max-height: 240px;
+        max-height: 250px;
         padding: 15px 0;
         transition: all 0.5s;
         margin-bottom: 20px;
@@ -233,6 +233,10 @@ label {
         max-width: 280px;
         padding: 50px 0px 10px 0px;
     }
+    .photo-banner img {
+        height: 320px;
+        width: 320px;
+    }
 }
 
 @media only screen and (min-width: 321px) and (max-width: 375px) {
@@ -242,8 +246,8 @@ label {
         padding: 50px 0px 10px 0px;
     }
     .photo-banner img {
-        height: 320px;
-        width: 320px;
+        height: 280px;
+        width: 280px;
     }
 }
 
@@ -254,8 +258,8 @@ label {
         padding: 50px 0px 10px 0px;
     }
     .photo-banner img {
-        height: 280px;
-        width: 280px;
+        height: 240px;
+        width: 240px;
     }
 }
 

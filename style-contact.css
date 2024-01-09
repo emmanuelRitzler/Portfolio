@@ -129,7 +129,7 @@ nav a {
         display: none;
     }
     #checkbox:checked ~ nav ul {
-        max-height: 240px;
+        max-height: 250px;
         padding: 15px 0;
         transition: all 0.5s;
         margin-bottom: 20px;
