@@ -517,6 +517,42 @@ label {
     padding-right: 5px;
 }
 
+.project-8 {
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: 50% 10% 20% 20%;
+    grid-row: 3 / 4;
+    grid-column: 2 / 3;
+    border: 2px solid black;
+    min-width: 300px;
+    align-items: center;
+}
+
+.project-8 img {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    height: 145px;
+    width: 296px;
+    object-fit: contain;
+}
+
+.project-8 h3 {
+    grid-row: 2 / 3;
+    grid-column: 1 / 2;
+    font-family: PixelOperator, sans-serif;
+    font-size: 1.4rem;
+    padding-left: 10px;
+}
+
+.project-8 p {
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
+    font-family: PixelOperator, sans-serif;
+    font-size: 1rem;
+    padding-left: 10px;
+    padding-right: 5px;
+}
+
 .btn-grid {
     text-align: center;
     font-family: PixelOperator, sans-serif;
@@ -625,13 +661,23 @@ label {
         min-width: 300px;
         align-items: center;
     }
+    .project-8 {
+        display: grid;
+        grid-template-columns: 1;
+        grid-template-rows: 50% 10% 20% 20%;
+        grid-row: 4 / 5;
+        grid-column: 2 / 3;
+        border: 2px solid black;
+        min-width: 300px;
+        align-items: center;
+    }
 }
 
 @media only screen and (min-width: 0px) and (max-width: 425px) {
     .grid-projects {
         display: grid;
         grid-template-columns: 300px;
-        grid-template-rows: 300px 300px 300px 300px 300px 300px 300px;
+        grid-template-rows: 300px 300px 300px 300px 300px 300px 300px 300px;
         gap: 50px 20px;
     }
     .project-1 {
@@ -699,6 +745,16 @@ label {
         grid-template-columns: 1;
         grid-template-rows: 50% 10% 20% 20%;
         grid-row: 7 / 8;
+        grid-column: 1 / 2;
+        border: 2px solid black;
+        min-width: 300px;
+        align-items: center;
+    }
+    .project-8 {
+        display: grid;
+        grid-template-columns: 1;
+        grid-template-rows: 50% 10% 20% 20%;
+        grid-row: 8 / 9;
         grid-column: 1 / 2;
         border: 2px solid black;
         min-width: 300px;
