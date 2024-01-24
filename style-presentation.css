@@ -305,10 +305,55 @@ label {
     margin-top: 30px;
 }
 
+/* DARK MODE SLIDER */
+
+.darkmode-container {
+    height: 60px;
+    background-color: #b8b8b800;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+}
+
+.darkmode-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.darkmode-icon img {
+    height: 20px;
+    width: 20px;
+} 
+
+.darkmode-slider {
+    border: 2px rgba(0, 0, 0, 0.752) solid;
+    height: 25px;
+    width: 60px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    cursor: pointer;
+}
+
+.darkmode-button {
+    border: 1.5px #404040 solid;
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+    margin-right: 5px;
+    margin-left: 5px;
+    background-color: #7C7C7C;
+}
+
 /* FOOTER */
 
 footer h3 {
-    margin-top: 260px;
+    margin-top: 10px;
     text-align: center;
     font-family: PixelOperator, sans-serif;
     font-size: 1.2rem;
@@ -329,6 +374,6 @@ footer h3 {
 
 @media only screen and (max-width: 425px) {
     footer h3 {
-        margin-top: 220px;
+        margin-top: 10px;
     }
 }
