@@ -51,8 +51,8 @@ body {
     --typewriter-color: .15em solid rgb(0, 0, 0);
     --border-color-typewriter: black;
 
-    --button-color: #7c7c7c;
-    --button-color-hover: #BCBCBC;
+    --button-color: #2c6f11;
+    --button-color-hover: #3ea018;
     --button-border-bottom: 6px inset rgba(0,0,0,.5);
     --button-border-left: 6px inset rgba(0,0,0,.5);
     --button-border-right: 6px inset rgba(255,255,255,.5);
@@ -87,8 +87,8 @@ body {
     --border-color-typewriter: white;
 
 
-    --button-color: #d0d0d0;
-    --button-color-hover: #BCBCBC;
+    --button-color: #4cc71c;
+    --button-color-hover: #3ea017;
     --button-border-bottom: 6px inset rgba(0,0,0,.5);
     --button-border-left: 6px inset rgba(0,0,0,.5);
     --button-border-right: 6px inset rgba(255,255,255,.5);

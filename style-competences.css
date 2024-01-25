@@ -58,7 +58,7 @@ body {
     --cv-button-border-right: 6px inset rgba(255,255,255,.5);
     --cv-button-border-top: 6px inset rgba(255,255,255,.5);
 
-    --button-color: #d0d0d0;
+    --button-color: #7c7c7c;
     --button-color-hover: #BCBCBC;
     --button-border-bottom: 6px inset rgba(0,0,0,.5);
     --button-border-left: 6px inset rgba(0,0,0,.5);
@@ -93,15 +93,15 @@ body {
     --typewriter-color: .15em solid rgb(255, 255, 255);
     --border-color-typewriter: white;
 
-    --cv-button-color: #d0d0d0;
-    --cv-button-color-hover: #BCBCBC;
+    --cv-button-color: #999999;
+    --cv-button-color-hover: #b6b6b6;
     --cv-button-border-bottom: 6px inset rgba(0,0,0,.5);
     --cv-button-border-left: 6px inset rgba(0,0,0,.5);
     --cv-button-border-right: 6px inset rgba(255,255,255,.5);
     --cv-button-border-top: 6px inset rgba(255,255,255,.5);
 
     --button-color: #d0d0d0;
-    --button-color-hover: #BCBCBC;
+    --button-color-hover: #a6a6a6;
     --button-border-bottom: 6px inset rgba(0,0,0,.5);
     --button-border-left: 6px inset rgba(0,0,0,.5);
     --button-border-right: 6px inset rgba(255,255,255,.5);
@@ -395,7 +395,7 @@ label {
 	
 	&:focus,
 	&:hover {
-		background: var(--button-color-hover);
+		background: var(--cv-button-color-hover);
 	}
 }
 
