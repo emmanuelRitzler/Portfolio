@@ -51,12 +51,21 @@ body {
     --typewriter-color: .15em solid rgb(0, 0, 0);
     --border-color-typewriter: black;
 
+    --border-project: black 2px solid;
+
     --button-color: #7c7c7c;
     --button-color-hover: #BCBCBC;
     --button-border-bottom: 6px inset rgba(0,0,0,.5);
     --button-border-left: 6px inset rgba(0,0,0,.5);
     --button-border-right: 6px inset rgba(255,255,255,.5);
     --button-border-top: 6px inset rgba(255,255,255,.5);
+
+    --grid-button-color: #7c7c7c;
+    --grid-button-color-hover: #BCBCBC;
+    --grid-button-border-bottom: 6px inset rgba(0,0,0,.5);
+    --grid-button-border-left: 6px inset rgba(0,0,0,.5);
+    --grid-button-border-right: 6px inset rgba(255,255,255,.5);
+    --grid-button-border-top: 6px inset rgba(255,255,255,.5);
 
     --darkmode-slider-border: 2px rgba(0, 0, 0, 0.752) solid;
     --darkmode-button-color: #7C7C7C;
@@ -86,6 +95,7 @@ body {
     --typewriter-color: .15em solid rgb(255, 255, 255);
     --border-color-typewriter: white;
 
+    --border-project: white 2px solid;
 
     --button-color: #d0d0d0;
     --button-color-hover: #BCBCBC;
@@ -93,6 +103,13 @@ body {
     --button-border-left: 6px inset rgba(0,0,0,.5);
     --button-border-right: 6px inset rgba(255,255,255,.5);
     --button-border-top: 6px inset rgba(255,255,255,.5);
+
+    --grid-button-color: #7c7c7c;
+    --grid-button-color-hover: #BCBCBC;
+    --grid-button-border-bottom: 6px inset rgba(0,0,0,.5);
+    --grid-button-border-left: 6px inset rgba(0,0,0,.5);
+    --grid-button-border-right: 6px inset rgba(255,255,255,.5);
+    --grid-button-border-top: 6px inset rgba(255,255,255,.5);
 
     --darkmode-slider-border: 2px rgb(255, 255, 255) solid;
     --darkmode-button-color: #bebebe;
@@ -662,13 +679,13 @@ label {
 .btn-grid {
     text-align: center;
     font-family: PixelOperator, sans-serif;
-	background: var(--grid-button-bg);
+	background: var(--button-color);
 	border-bottom: var(--grid-button-border-bottom);
 	border-left: var(--grid-button-border-left);
 	border-right: var(--grid-button-border-right);
 	border-top: var(--grid-button-border-top);
 	box-sizing: border-box;
-	color: var(--primary-text);
+	color: var(--button-text);
 	cursor: pointer;
 	display: inline-block;
 	font-size: 1rem;
@@ -681,7 +698,7 @@ label {
 	
 	&:focus,
 	&:hover {
-		background: #BCBCBC;
+		background: var(--grid-button-color-hover);
 	}
 }
 
