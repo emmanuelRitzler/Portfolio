@@ -51,8 +51,8 @@ body {
     --typewriter-color: .15em solid rgb(0, 0, 0);
     --border-color-typewriter: black;
 
-    --button-color: #08642a;
-    --button-color-hover: #08642a;
+    --button-color: #7c7c7c;
+    --button-color-hover: #BCBCBC;
     --button-border-bottom: 6px inset rgba(0,0,0,.5);
     --button-border-left: 6px inset rgba(0,0,0,.5);
     --button-border-right: 6px inset rgba(255,255,255,.5);
@@ -61,6 +61,8 @@ body {
     --darkmode-slider-border: 2px rgba(0, 0, 0, 0.752) solid;
     --darkmode-button-color: #7C7C7C;
     --darkmode-button-border: 1.5px #404040 solid;
+    
+    --slider-button-pos: flex-start;
 
     --social-media-color: invert(0);
 }
@@ -85,8 +87,8 @@ body {
     --border-color-typewriter: white;
 
 
-    --button-color: #14b850;
-    --button-color-hover: #14b850;
+    --button-color: #d0d0d0;
+    --button-color-hover: #BCBCBC;
     --button-border-bottom: 6px inset rgba(0,0,0,.5);
     --button-border-left: 6px inset rgba(0,0,0,.5);
     --button-border-right: 6px inset rgba(255,255,255,.5);
@@ -95,6 +97,8 @@ body {
     --darkmode-slider-border: 2px rgb(255, 255, 255) solid;
     --darkmode-button-color: #bebebe;
     --darkmode-button-border: 1.5px #404040 solid;
+
+    --slider-button-pos: end;
 
     --social-media-color: invert(1);
 }
@@ -483,7 +487,7 @@ nav a {
     border-radius: 15px;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: var(--slider-button-pos);
     cursor: pointer;
 }
 

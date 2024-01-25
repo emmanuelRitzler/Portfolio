@@ -61,6 +61,8 @@ body {
     --darkmode-slider-border: 2px rgba(0, 0, 0, 0.752) solid;
     --darkmode-button-color: #7C7C7C;
     --darkmode-button-border: 1.5px #404040 solid;
+    
+    --slider-button-pos: flex-start;
 
     --social-media-color: invert(0);
 }
@@ -95,6 +97,8 @@ body {
     --darkmode-slider-border: 2px rgb(255, 255, 255) solid;
     --darkmode-button-color: #bebebe;
     --darkmode-button-border: 1.5px #404040 solid;
+
+    --slider-button-pos: end;
 
     --social-media-color: invert(1);
 }
@@ -369,7 +373,7 @@ body {
     border-radius: 15px;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: var(--slider-button-pos);
     cursor: pointer;
 }
 
