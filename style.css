@@ -5,7 +5,6 @@
     box-sizing: border-box;
 }
 
-
 h1 {
     color: var(--primary-text);
 }
@@ -17,7 +16,6 @@ h2 {
 h3 {
     color: var(--primary-text);
 }
-
 
 body {
     background-color: var(--page-bg);
@@ -255,11 +253,11 @@ body {
 }
 
 .typewriter h2 {
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: var(--typewriter-color); /* The typwriter cursor */
-    white-space: nowrap; /* Keeps the content on a single line */
-    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    letter-spacing: .15em; /* Adjust as needed */
+    overflow: hidden;
+    border-right: var(--typewriter-color);
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
     animation: 
       typing 2.5s steps(40, end),
       blink-caret .75s step-end infinite;

@@ -5,6 +5,23 @@
     box-sizing: border-box;
 }
 
+h1 {
+    color: var(--primary-text);
+}
+
+h2 {
+    color: var(--primary-text);
+}
+
+h3 {
+    color: var(--primary-text);
+}
+
+body {
+    background-color: var(--page-bg);
+    transition: background-color 0.5s ease;
+}
+
 @font-face {
     font-family: PixelOperator;
     src: url(Fonts/PixelOperator.ttf);
@@ -15,14 +32,96 @@
     src: url(Fonts/Retro\ Gaming.ttf);
 }
 
+:root[data-theme="light"] {
+
+    --page-bg: #fff;
+
+    --border-bottom: 2px rgba(188, 188, 188, 0.241) solid;
+    --box-shadow: 0px 2px 10px rgba(177, 176, 176, 0.204);
+
+    --primary-text: black;
+    --button-text: #fff;
+    --nav-text-mobile: lightgray;
+
+    --logo-color: invert(0);
+    --nav-hover-color: rgb(144, 144, 144);
+    --nav-bg-mobile: rgb(0, 0, 0);
+    --menu-color: black;
+
+    --typewriter-color: .15em solid rgb(0, 0, 0);
+    --border-color-typewriter: black;
+
+    --border-project: 2px solid black;
+
+    --grid-button-bg: #ffffff;
+	--grid-button-border-bottom: 6px inset rgba(0,0,0,.5);
+	--grid-button-border-left: 6px inset rgba(0,0,0,.5);
+	--grid-button-border-right: 6px inset rgba(221, 219, 219, 0.55);
+	--grid-button-border-top: 6px inset rgba(255,255,255,.5);
+
+    --button-color: #7c7c7c;
+    --button-color-hover: #BCBCBC;
+    --button-border-bottom: 6px inset rgba(0,0,0,.5);
+    --button-border-left: 6px inset rgba(0,0,0,.5);
+    --button-border-right: 6px inset rgba(255,255,255,.5);
+    --button-border-top: 6px inset rgba(255,255,255,.5);
+
+    --darkmode-slider-border: 2px rgba(0, 0, 0, 0.752) solid;
+    --darkmode-button-color: #7C7C7C;
+    --darkmode-button-border: 1.5px #404040 solid;
+
+    --social-media-color: invert(0);
+}
+
+:root[data-theme="dark"] {
+
+    --page-bg: #000000;
+
+    --border-bottom: 2px rgba(188, 188, 188, 0.241) solid;
+    --box-shadow: 0px 2px 0px white;
+
+    --primary-text: rgb(255, 255, 255);
+    --button-text: #000000;
+    --nav-text-mobile: rgb(255, 255, 255);
+
+    --logo-color: invert(1);
+    --nav-hover-color: rgb(144, 144, 144);
+    --nav-bg-mobile: rgb(0, 0, 0);
+    --menu-color: white;
+
+    --typewriter-color: .15em solid rgb(255, 255, 255);
+    --border-color-typewriter: white;
+
+    --border-project: 2px solid white;
+
+    --grid-button-bg: #828282;
+	--grid-button-border-bottom: 6px inset rgba(0,0,0,.5);
+	--grid-button-border-left: 6px inset rgba(0,0,0,.5);
+	--grid-button-border-right: 6px inset rgba(221, 219, 219, 0.55);
+	--grid-button-border-top: 6px inset rgba(255,255,255,.5);
+
+    --button-color: #d0d0d0;
+    --button-color-hover: #BCBCBC;
+    --button-border-bottom: 6px inset rgba(0,0,0,.5);
+    --button-border-left: 6px inset rgba(0,0,0,.5);
+    --button-border-right: 6px inset rgba(255,255,255,.5);
+    --button-border-top: 6px inset rgba(255,255,255,.5);
+
+    --darkmode-slider-border: 2px rgb(255, 255, 255) solid;
+    --darkmode-button-color: #bebebe;
+    --darkmode-button-border: 1.5px #404040 solid;
+
+    --social-media-color: invert(1);
+}
+
 /* HEADER */
 
 header.menu {
     width: auto;
     height: 100px;
-    border-bottom: 2px rgba(188, 188, 188, 0.241) solid;
+    border-bottom: var(--border-bottom);
     padding: 0px 50px;
-    box-shadow: 0px 2px 10px rgba(177, 176, 176, 0.204);
+    box-shadow: var(--box-shadow);
 }
 
 .menu-wrap {
@@ -36,6 +135,7 @@ header img {
     height: 80px;
     width: 80px;
     object-fit: contain;
+    filter: var(--logo-color);
 }
 
 nav {
@@ -57,12 +157,13 @@ nav li {
 nav a {
     height: 100px;
     text-decoration: none;
-    color: black;
+    color: var(--primary-text);
     display: flex;
     align-items: center;
 
     &:hover {
-        color: rgb(144, 144, 144);
+        color: var(--nav-hover-color);
+    }
     }
 }
 
@@ -96,7 +197,7 @@ label {
     }
     nav {
         position: absolute;
-        background-color: rgb(0, 0, 0);
+        background-color: var(--nav-bg-mobile);
         top: 100px;
         left: 0;
         width: 100%;
@@ -116,7 +217,7 @@ label {
         height: auto;
         width: 100%;
         padding: 12px;
-        color: lightgray;
+        color: var(--nav-text-mobile);
         text-decoration: none;
 
         &:hover,
@@ -135,6 +236,7 @@ label {
     }
     label {
         display: flex;
+        color: var(--menu-color);
     }
 } 
 
@@ -164,11 +266,11 @@ label {
 }
 
 .typewriter h2 {
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid rgb(0, 0, 0); /* The typwriter cursor */
-    white-space: nowrap; /* Keeps the content on a single line */
-    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    letter-spacing: .15em; /* Adjust as needed */
+    overflow: hidden;
+    border-right: var(--typewriter-color);
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
     animation: 
       typing 2.5s steps(40, end),
       blink-caret .75s step-end infinite;
@@ -183,7 +285,7 @@ label {
   /* The typewriter cursor effect */
   @keyframes blink-caret {
     from, to { border-color: transparent }
-    50% { border-color: black; }
+    50% { border-color: var(--border-color-typewriter); }
 }
 
 @media only screen and (max-width: 425px) {
@@ -213,13 +315,13 @@ label {
 .btn {
     text-align: center;
     font-family: PixelOperator, sans-serif;
-	background: #7C7C7C;
-	border-bottom: 6px inset rgba(0,0,0,.5);
-	border-left: 6px inset rgba(0,0,0,.5);
-	border-right: 6px inset rgba(255,255,255,.5);
-	border-top: 6px inset rgba(255,255,255,.5);
+	background: var(--button-color);
+	border-bottom: var(--button-border-bottom);
+	border-left: var(--button-border-left);
+	border-right: var(--button-border-right);
+	border-top: var(--button-border-top);
 	box-sizing: border-box;
-	color: white;
+	color: var(--button-text);
 	cursor: pointer;
 	display: inline-block;
 	font-size: 4.2rem;
@@ -231,17 +333,17 @@ label {
 	
 	&:focus,
 	&:hover {
-		background: #BCBCBC;
+		background: var(--button-color-hover);
 	}
 }
 
-.btn h3 {
+.btn p {
     font-size: 1.5rem;
 }
 
 .btn a {
     text-decoration: none;
-    color: white;
+    color: var(--button-text);
 }
 
 .button-container {
@@ -271,7 +373,7 @@ label {
     grid-template-rows: 50% 10% 20% 20%;
     grid-row: 1 / 2;
     grid-column: 1 / 2;
-    border: 2px solid black;
+    border: var(--border-project);
     min-width: 300px;
     align-items: center;
 }
@@ -290,6 +392,7 @@ label {
     font-family: PixelOperator, sans-serif;
     font-size: 1.4rem;
     padding-left: 10px;
+    color: var(--primary-text);
 }
 
 .project-1 p {
@@ -299,6 +402,7 @@ label {
     font-size: 1rem;
     padding-left: 10px;
     padding-right: 5px;
+    color: var(--primary-text);
 }
 
 .project-2 {
@@ -307,7 +411,7 @@ label {
     grid-template-rows: 50% 10% 20% 20%;
     grid-row: 1 / 2;
     grid-column: 2 / 3;
-    border: 2px solid black;
+    border: var(--border-project);
     min-width: 300px;
     align-items: center;
 }
@@ -326,6 +430,7 @@ label {
     font-family: PixelOperator, sans-serif;
     font-size: 1.4rem;
     padding-left: 10px;
+    color: var(--primary-text);
 }
 
 .project-2 p {
@@ -335,6 +440,7 @@ label {
     font-size: 1rem;
     padding-left: 10px;
     padding-right: 5px;
+    color: var(--primary-text);
 }
 
 .project-3 {
@@ -343,7 +449,7 @@ label {
     grid-template-rows: 50% 10% 20% 20%;
     grid-row: 1 / 2;
     grid-column: 3 / 4;
-    border: 2px solid black;
+    border: var(--border-project);
     min-width: 300px;
     align-items: center;
 }
@@ -362,6 +468,7 @@ label {
     font-family: PixelOperator, sans-serif;
     font-size: 1.4rem;
     padding-left: 10px;
+    color: var(--primary-text);
 }
 
 .project-3 p {
@@ -371,6 +478,7 @@ label {
     font-size: 1rem;
     padding-left: 10px;
     padding-right: 5px;
+    color: var(--primary-text);
 }
 
 .project-4 {
@@ -379,7 +487,7 @@ label {
     grid-template-rows: 50% 10% 20% 20%;
     grid-row: 2 / 3;
     grid-column: 1 / 2;
-    border: 2px solid black;
+    border: var(--border-project);
     min-width: 300px;
     align-items: center;
 }
@@ -398,6 +506,7 @@ label {
     font-family: PixelOperator, sans-serif;
     font-size: 1.4rem;
     padding-left: 10px;
+    color: var(--primary-text);
 }
 
 .project-4 p {
@@ -407,6 +516,7 @@ label {
     font-size: 1rem;
     padding-left: 10px;
     padding-right: 5px;
+    color: var(--primary-text);
 }
 
 .project-5 {
@@ -415,7 +525,7 @@ label {
     grid-template-rows: 50% 10% 20% 20%;
     grid-row: 2 / 3;
     grid-column: 2 / 3;
-    border: 2px solid black;
+    border: var(--border-project);
     min-width: 300px;
     align-items: center;
 }
@@ -434,6 +544,7 @@ label {
     font-family: PixelOperator, sans-serif;
     font-size: 1.4rem;
     padding-left: 10px;
+    color: var(--primary-text);
 }
 
 .project-5 p {
@@ -443,6 +554,7 @@ label {
     font-size: 1rem;
     padding-left: 10px;
     padding-right: 5px;
+    color: var(--primary-text);
 }
 
 .project-6 {
@@ -451,7 +563,7 @@ label {
     grid-template-rows: 50% 10% 20% 20%;
     grid-row: 2 / 3;
     grid-column: 3 / 4;
-    border: 2px solid black;
+    border: var(--border-project);
     min-width: 300px;
     align-items: center;
 }
@@ -470,6 +582,7 @@ label {
     font-family: PixelOperator, sans-serif;
     font-size: 1.4rem;
     padding-left: 10px;
+    color: var(--primary-text);
 }
 
 .project-6 p {
@@ -479,6 +592,7 @@ label {
     font-size: 1rem;
     padding-left: 10px;
     padding-right: 5px;
+    color: var(--primary-text);
 }
 
 .project-7 {
@@ -487,7 +601,7 @@ label {
     grid-template-rows: 50% 10% 20% 20%;
     grid-row: 3 / 4;
     grid-column: 1 / 2;
-    border: 2px solid black;
+    border: var(--border-project);
     min-width: 300px;
     align-items: center;
 }
@@ -506,6 +620,7 @@ label {
     font-family: PixelOperator, sans-serif;
     font-size: 1.4rem;
     padding-left: 10px;
+    color: var(--primary-text);
 }
 
 .project-7 p {
@@ -515,6 +630,7 @@ label {
     font-size: 1rem;
     padding-left: 10px;
     padding-right: 5px;
+    color: var(--primary-text);
 }
 
 .project-8 {
@@ -523,7 +639,7 @@ label {
     grid-template-rows: 50% 10% 20% 20%;
     grid-row: 3 / 4;
     grid-column: 2 / 3;
-    border: 2px solid black;
+    border: var(--border-project);
     min-width: 300px;
     align-items: center;
 }
@@ -542,6 +658,7 @@ label {
     font-family: PixelOperator, sans-serif;
     font-size: 1.4rem;
     padding-left: 10px;
+    color: var(--primary-text);
 }
 
 .project-8 p {
@@ -551,18 +668,19 @@ label {
     font-size: 1rem;
     padding-left: 10px;
     padding-right: 5px;
+    color: var(--primary-text);
 }
 
 .btn-grid {
     text-align: center;
     font-family: PixelOperator, sans-serif;
-	background: #ffffff;
-	border-bottom: 6px inset rgba(0,0,0,.5);
-	border-left: 6px inset rgba(0,0,0,.5);
-	border-right: 6px inset rgba(221, 219, 219, 0.55);
-	border-top: 6px inset rgba(255,255,255,.5);
+	background: var(--grid-button-bg);
+	border-bottom: var(--grid-button-border-bottom);
+	border-left: var(--grid-button-border-left);
+	border-right: var(--grid-button-border-right);
+	border-top: var(--grid-button-border-top);
 	box-sizing: border-box;
-	color: black;
+	color: var(--primary-text);
 	cursor: pointer;
 	display: inline-block;
 	font-size: 1rem;
@@ -597,7 +715,7 @@ label {
         grid-template-rows: 50% 10% 20% 20%;
         grid-row: 1 / 2;
         grid-column: 1 / 2;
-        border: 2px solid black;
+        border: var(--border-project);
         min-width: 300px;
         align-items: center;
     }
@@ -607,7 +725,7 @@ label {
         grid-template-rows: 50% 10% 20% 20%;
         grid-row: 1 / 2;
         grid-column: 2 / 3;
-        border: 2px solid black;
+        border: var(--border-project);
         min-width: 300px;
         align-items: center;
     }
@@ -617,7 +735,7 @@ label {
         grid-template-rows: 50% 10% 20% 20%;
         grid-row: 2 / 3;
         grid-column: 1 / 2;
-        border: 2px solid black;
+        border: var(--border-project);
         min-width: 300px;
         align-items: center;
     }
@@ -627,7 +745,7 @@ label {
         grid-template-rows: 50% 10% 20% 20%;
         grid-row: 2 / 3;
         grid-column: 2 / 3;
-        border: 2px solid black;
+        border: var(--border-project);
         min-width: 300px;
         align-items: center;
     }
@@ -637,7 +755,7 @@ label {
         grid-template-rows: 50% 10% 20% 20%;
         grid-row: 3 / 4;
         grid-column: 1 / 2;
-        border: 2px solid black;
+        border: var(--border-project);
         min-width: 300px;
         align-items: center;
     }
@@ -647,7 +765,7 @@ label {
         grid-template-rows: 50% 10% 20% 20%;
         grid-row: 3 / 4;
         grid-column: 2 / 3;
-        border: 2px solid black;
+        border: var(--border-project);
         min-width: 300px;
         align-items: center;
     }
@@ -657,7 +775,7 @@ label {
         grid-template-rows: 50% 10% 20% 20%;
         grid-row: 4 / 5;
         grid-column: 1 / 2;
-        border: 2px solid black;
+        border: var(--border-project);
         min-width: 300px;
         align-items: center;
     }
@@ -667,7 +785,7 @@ label {
         grid-template-rows: 50% 10% 20% 20%;
         grid-row: 4 / 5;
         grid-column: 2 / 3;
-        border: 2px solid black;
+        border: var(--border-project);
         min-width: 300px;
         align-items: center;
     }
@@ -686,7 +804,7 @@ label {
         grid-template-rows: 50% 10% 20% 20%;
         grid-row: 1 / 2;
         grid-column: 1 / 2;
-        border: 2px solid black;
+        border: var(--border-project);
         min-width: 300px;
         align-items: center;
     }
@@ -696,7 +814,7 @@ label {
         grid-template-rows: 50% 10% 20% 20%;
         grid-row: 2 / 3;
         grid-column: 1 / 2;
-        border: 2px solid black;
+        border: var(--border-project);
         min-width: 300px;
         align-items: center;
     }
@@ -706,7 +824,7 @@ label {
         grid-template-rows: 50% 10% 20% 20%;
         grid-row: 3 / 4;
         grid-column: 1 / 2;
-        border: 2px solid black;
+        border: var(--border-project);
         min-width: 300px;
         align-items: center;
     }
@@ -716,7 +834,7 @@ label {
         grid-template-rows: 50% 10% 20% 20%;
         grid-row: 4 / 5;
         grid-column: 1 / 2;
-        border: 2px solid black;
+        border: var(--border-project);
         min-width: 300px;
         align-items: center;
     }
@@ -726,7 +844,7 @@ label {
         grid-template-rows: 50% 10% 20% 20%;
         grid-row: 5 / 6;
         grid-column: 1 / 2;
-        border: 2px solid black;
+        border: var(--border-project);
         min-width: 300px;
         align-items: center;
     }
@@ -736,7 +854,7 @@ label {
         grid-template-rows: 50% 10% 20% 20%;
         grid-row: 6 / 7;
         grid-column: 1 / 2;
-        border: 2px solid black;
+        border: var(--border-project);
         min-width: 300px;
         align-items: center;
     }
@@ -746,7 +864,7 @@ label {
         grid-template-rows: 50% 10% 20% 20%;
         grid-row: 7 / 8;
         grid-column: 1 / 2;
-        border: 2px solid black;
+        border: var(--border-project);
         min-width: 300px;
         align-items: center;
     }
@@ -756,7 +874,7 @@ label {
         grid-template-rows: 50% 10% 20% 20%;
         grid-row: 8 / 9;
         grid-column: 1 / 2;
-        border: 2px solid black;
+        border: var(--border-project);
         min-width: 300px;
         align-items: center;
     }
@@ -766,7 +884,6 @@ label {
 
 .darkmode-container {
     height: 60px;
-    background-color: #b8b8b800;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -785,7 +902,7 @@ label {
 } 
 
 .darkmode-slider {
-    border: 2px rgba(0, 0, 0, 0.752) solid;
+    border: var(--darkmode-slider-border);
     height: 25px;
     width: 60px;
     margin-left: 5px;
@@ -793,18 +910,22 @@ label {
     border-radius: 15px;
     display: flex;
     align-items: center;
-    justify-content: start;
+    justify-content: flex-start;
     cursor: pointer;
 }
 
 .darkmode-button {
-    border: 1.5px #404040 solid;
+    border: var(--darkmode-button-border);
     border-radius: 50%;
     height: 15px;
     width: 15px;
     margin-right: 5px;
     margin-left: 5px;
-    background-color: #7C7C7C;
+    background-color: var(--darkmode-button-color);
+}
+
+.darkmode-icon img {
+    filter: var(--logo-color);
 }
 
 /* FOOTER */
@@ -827,6 +948,7 @@ footer h3 {
     width: 80px;
     margin-top: 10px;
     padding: 20px;
+    filter: var(--social-media-color);
 }
 
 @media only screen and (max-width: 425px) {

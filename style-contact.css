@@ -5,6 +5,23 @@
     box-sizing: border-box;
 }
 
+h1 {
+    color: var(--primary-text);
+}
+
+h2 {
+    color: var(--primary-text);
+}
+
+h3 {
+    color: var(--primary-text);
+}
+
+body {
+    background-color: var(--page-bg);
+    transition: background-color 0.5s ease;
+}
+
 @font-face {
     font-family: PixelOperator;
     src: url(Fonts/PixelOperator.ttf);
@@ -15,14 +32,81 @@
     src: url(Fonts/Retro\ Gaming.ttf);
 }
 
+:root[data-theme="light"] {
+
+    --page-bg: #fff;
+
+    --border-bottom: 2px rgba(188, 188, 188, 0.241) solid;
+    --box-shadow: 0px 2px 10px rgba(177, 176, 176, 0.204);
+
+    --primary-text: black;
+    --button-text: #fff;
+    --nav-text-mobile: lightgray;
+
+    --logo-color: invert(0);
+    --nav-hover-color: rgb(144, 144, 144);
+    --nav-bg-mobile: rgb(0, 0, 0);
+    --menu-color: black;
+
+    --typewriter-color: .15em solid rgb(0, 0, 0);
+    --border-color-typewriter: black;
+
+    --button-color: #08642a;
+    --button-color-hover: #08642a;
+    --button-border-bottom: 6px inset rgba(0,0,0,.5);
+    --button-border-left: 6px inset rgba(0,0,0,.5);
+    --button-border-right: 6px inset rgba(255,255,255,.5);
+    --button-border-top: 6px inset rgba(255,255,255,.5);
+
+    --darkmode-slider-border: 2px rgba(0, 0, 0, 0.752) solid;
+    --darkmode-button-color: #7C7C7C;
+    --darkmode-button-border: 1.5px #404040 solid;
+
+    --social-media-color: invert(0);
+}
+
+:root[data-theme="dark"] {
+
+    --page-bg: #000000;
+
+    --border-bottom: 2px rgba(188, 188, 188, 0.241) solid;
+    --box-shadow: 0px 2px 0px white;
+
+    --primary-text: rgb(255, 255, 255);
+    --button-text: #000000;
+    --nav-text-mobile: rgb(255, 255, 255);
+
+    --logo-color: invert(1);
+    --nav-hover-color: rgb(144, 144, 144);
+    --nav-bg-mobile: rgb(0, 0, 0);
+    --menu-color: white;
+
+    --typewriter-color: .15em solid rgb(255, 255, 255);
+    --border-color-typewriter: white;
+
+
+    --button-color: #14b850;
+    --button-color-hover: #14b850;
+    --button-border-bottom: 6px inset rgba(0,0,0,.5);
+    --button-border-left: 6px inset rgba(0,0,0,.5);
+    --button-border-right: 6px inset rgba(255,255,255,.5);
+    --button-border-top: 6px inset rgba(255,255,255,.5);
+
+    --darkmode-slider-border: 2px rgb(255, 255, 255) solid;
+    --darkmode-button-color: #bebebe;
+    --darkmode-button-border: 1.5px #404040 solid;
+
+    --social-media-color: invert(1);
+}
+
 /* HEADER */
 
 header.menu {
     width: auto;
     height: 100px;
-    border-bottom: 2px rgba(188, 188, 188, 0.241) solid;
+    border-bottom: var(--border-bottom);
     padding: 0px 50px;
-    box-shadow: 0px 2px 10px rgba(177, 176, 176, 0.204);
+    box-shadow: var(--box-shadow);
 }
 
 .menu-wrap {
@@ -36,6 +120,7 @@ header img {
     height: 80px;
     width: 80px;
     object-fit: contain;
+    filter: var(--logo-color);
 }
 
 nav {
@@ -57,12 +142,12 @@ nav li {
 nav a {
     height: 100px;
     text-decoration: none;
-    color: black;
+    color: var(--primary-text);
     display: flex;
     align-items: center;
 
     &:hover {
-        color: rgb(144, 144, 144);
+        color: var(--nav-hover-color);
     }
 }
 
@@ -96,11 +181,10 @@ nav a {
     }
     nav {
         position: absolute;
-        background-color: rgb(0, 0, 0);
+        background-color: var(--nav-bg-mobile);
         top: 100px;
         left: 0;
         width: 100%;
-
     }
     nav ul {
         display: inline;
@@ -117,7 +201,7 @@ nav a {
         height: auto;
         width: 100%;
         padding: 12px;
-        color: lightgray;
+        color: var(--nav-text-mobile);
         text-decoration: none;
 
         &:hover,
@@ -137,10 +221,13 @@ nav a {
     .menu-mobile {
         display: flex;
     }
-
     .reward {
         display: flex;
         justify-content: center;
+    }
+    label {
+        display: flex;
+        color: var(--menu-color);
     }
 } 
 
@@ -171,11 +258,11 @@ nav a {
 }
 
 .typewriter h2 {
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid rgb(0, 0, 0); /* The typwriter cursor */
-    white-space: nowrap; /* Keeps the content on a single line */
-    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    letter-spacing: .15em; /* Adjust as needed */
+    overflow: hidden;
+    border-right: var(--typewriter-color);
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15em;
     animation: 
       typing 2.5s steps(40, end),
       blink-caret .75s step-end infinite;
@@ -190,7 +277,7 @@ nav a {
   /* The typewriter cursor effect */
   @keyframes blink-caret {
     from, to { border-color: transparent }
-    50% { border-color: black; }
+    50% { border-color: var(--border-color-typewriter); }
 }
 
 .gif {
@@ -274,13 +361,13 @@ nav a {
 .btn {
     text-align: center;
     font-family: PixelOperator, sans-serif;
-	background: #005800;
-	border-bottom: 6px inset rgba(0,0,0,.5);
-	border-left: 6px inset rgba(0,0,0,.5);
-	border-right: 6px inset rgba(255,255,255,.5);
-	border-top: 6px inset rgba(255,255,255,.5);
+	background: var(--button-color);
+	border-bottom: var(--button-border-bottom);
+	border-left: var(--button-border-left);
+	border-right: var(--button-border-right);
+	border-top: var(--button-border-top);
 	box-sizing: border-box;
-	color: white;
+	color: var(--button-text);
 	cursor: pointer;
 	display: inline-block;
 	font-size: 4.2rem;
@@ -292,17 +379,17 @@ nav a {
 	
 	&:focus,
 	&:hover {
-		background: #006800;
+		background: var(--button-color-hover);
 	}
 }
 
-.btn h3 {
+.btn p {
     font-size: 1.5rem;
 }
 
 .btn a {
     text-decoration: none;
-    color: white;
+    color: var(--button-text);
 }
 
 .button-container {
@@ -315,18 +402,16 @@ nav a {
 
 .phone-number {
     position: absolute;
-    background-color: rgb(255, 255, 255);
     top: 920px;
     left: 0;
     width: 100%;
     display: inline;
-
+    color: var(--primary-text);
 }
 
 .phone-number p {
     text-align: center;
     font-family: PixelOperator;
-    color: rgb(0, 0, 0);
     font-size: 2.2rem;
     max-height: 0;
     overflow: hidden;
@@ -372,7 +457,6 @@ nav a {
 
 .darkmode-container {
     height: 60px;
-    background-color: #b8b8b800;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -391,7 +475,7 @@ nav a {
 } 
 
 .darkmode-slider {
-    border: 2px rgba(0, 0, 0, 0.752) solid;
+    border: var(--darkmode-slider-border);
     height: 25px;
     width: 60px;
     margin-left: 5px;
@@ -399,18 +483,22 @@ nav a {
     border-radius: 15px;
     display: flex;
     align-items: center;
-    justify-content: start;
+    justify-content: flex-start;
     cursor: pointer;
 }
 
 .darkmode-button {
-    border: 1.5px #404040 solid;
+    border: var(--darkmode-button-border);
     border-radius: 50%;
     height: 15px;
     width: 15px;
     margin-right: 5px;
     margin-left: 5px;
-    background-color: #7C7C7C;
+    background-color: var(--darkmode-button-color);
+}
+
+.darkmode-icon img {
+    filter: var(--logo-color);
 }
 
 /* FOOTER */
@@ -433,6 +521,7 @@ footer h3 {
     width: 80px;
     margin-top: 10px;
     padding: 20px;
+    filter: var(--social-media-color);
 }
 
 @media only screen and (max-width: 425px) {
