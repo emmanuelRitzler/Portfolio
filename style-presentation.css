@@ -165,7 +165,7 @@ label {
     display: none;
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 965px) {
     header img {
         height: 60px;
         width: 60px;
@@ -316,7 +316,7 @@ label {
     margin: 0 auto;
 }
 
-@media only screen and (min-width: 376px) and (max-width: 425px) {
+@media only screen and (min-width: 376px) and (max-width: 580px) {
     .presentation p {
         font-size: 0.7;
         max-width: 280px;

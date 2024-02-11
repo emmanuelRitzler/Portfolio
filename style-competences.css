@@ -179,7 +179,7 @@ label {
     display: none;
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 965px) {
     header img {
         height: 60px;
         width: 60px;
