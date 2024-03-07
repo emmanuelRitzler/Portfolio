@@ -71,6 +71,8 @@ body {
     
     --slider-button-pos: flex-start;
 
+    --language-option: black;
+
     --social-media-color: invert(0);
 }
 
@@ -112,6 +114,8 @@ body {
     --darkmode-button-border: 1.5px #404040 solid;
 
     --slider-button-pos: end;
+
+    --language-option: white;
 
     --social-media-color: invert(1);
 }
@@ -162,6 +166,8 @@ nav a {
     color: var(--primary-text);
     display: flex;
     align-items: center;
+    padding-left: 40px;
+    font-size: 1.2rem;
 
     &:hover {
         color: var(--nav-hover-color);
@@ -217,9 +223,10 @@ label {
         display: inline-block;
         height: auto;
         width: 100%;
-        padding: 12px;
+        padding: 12px 20px;
         color: var(--nav-text-mobile);
         text-decoration: none;
+        text-align: left;
 
         &:hover,
         &:focus {
@@ -230,7 +237,7 @@ label {
         display: none;
     }
     #checkbox:checked ~ nav ul {
-        max-height: 260px;
+        max-height: 300px;
         padding: 15px 0;
         transition: all 0.5s;
         margin-bottom: 20px;
@@ -400,7 +407,7 @@ label {
 }
 
 .btn-cv p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: var(--primary-text);
 }
 
@@ -519,11 +526,38 @@ label {
 
 /* FOOTER */
 
-footer h3 {
+footer h3, a {
     margin-top: 10px;
     text-align: center;
     font-family: PixelOperator, sans-serif;
     font-size: 1.2rem;
+    font-weight: 400;
+    text-decoration: none;
+    color: var(--language-option);
+}
+
+.languages {
+    text-align: center;
+    margin-top: 10px;
+    color: --;
+}
+
+#french {
+    margin-left: 20px;
+
+    &:hover {
+        color: #7c7c7c;
+        cursor: pointer;
+    }
+}
+
+#english {
+    margin-right: 20px;
+
+    &:hover {
+        color: #7c7c7c;
+        cursor: pointer;
+    }
 }
 
 .social-icons {

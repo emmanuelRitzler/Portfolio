@@ -31,11 +31,11 @@
             <input type="checkbox" id="checkbox">
             <nav>
                 <ul>
-                    <a href="index.html"><li>Accueil</li></a>
-                    <a href="presentation.html"><li>Présentation</li></a>
-                    <a href="competences.html"><li>Compétences</li></a>
-                    <a href="projets.html"><li>Projets</li></a>
-                    <a href="contact.html"><li>Contact</li></a>
+                    <a href="index.html" data-il8n="home"><li>Accueil</li></a>
+                    <a href="presentation.html" data-il8n="presentation"><li>Présentation</li></a>
+                    <a href="competences.html" data-il8n="skills"><li>Compétences</li></a>
+                    <a href="projets.html" data-il8n="projects"><li>Projets</li></a>
+                    <a href="contact.html" data-il8n="contact"><li>Contact</li></a>
                 </ul>
             </nav>
             <label for="checkbox">
@@ -47,7 +47,7 @@
     <div class="banner-hero"> 
         <h1>LEVEL 2</h1>
         <div class="typewriter">
-            <h2>Compétences</h2>
+            <h2 data-il8n="title-skills">Compétences</h2>
         </div>
     </div>
 </main>
@@ -70,7 +70,7 @@
             <div class="cv-grid">
                 <img src="Images/CV Emmanuel Ritzler_page-0001.jpg" alt="CV Emmanuel Ritzler" aria-label="CV Emmanuel Ritzler">
                 <div class="btn-cv">
-                    <a href="Images/CV Emmanuel Ritzler.pdf" target="_blank"><p>AFFICHER LE CV</p></a>
+                    <a href="Images/CV Emmanuel Ritzler.pdf" target="_blank"><p data-il8n="display-cv">AFFICHER LE CV</p></a>
                 </div>
             </div>
         </div>
@@ -92,10 +92,15 @@
 </div>
 <footer>
     <h3>Emmanuel Ritzler - 2024</h3>
+    <div class="languages">
+        <a href="competences.html" id="english" onclick="changeLanguage('en')">EN</a>
+        <a href="competences.html" id="french" onclick="changeLanguage('fr')">FR</a>
+    </div>
     <div class="social-icons">
         <a href="https://www.linkedin.com/in/emmanuel-ritzler/" target="_blank"><img src="Images/linkedin.png" alt="Logo LinkedIn" aria-label="Logo LinkedIn"></a>
         <a href="https://github.com/emmanuelRitzler" target="_blank"><img src="Images/github.png" alt="Logo GitHub" aria-label="Logo GitHub"></a>
     </div>
+    <script src="switchLanguage.js" defer></script>
 </footer>
 <script src="./main.js"></script>
 </body>

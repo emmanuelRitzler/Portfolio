@@ -31,11 +31,11 @@
             <input type="checkbox" id="checkbox">
             <nav>
                 <ul>
-                    <a href="index.html"><li>Accueil</li></a>
-                    <a href="presentation.html"><li>Présentation</li></a>
-                    <a href="competences.html"><li>Compétences</li></a>
-                    <a href="projets.html"><li>Projets</li></a>
-                    <a href="contact.html"><li>Contact</li></a>
+                    <a href="index.html" data-il8n="home"><li>Accueil</li></a>
+                    <a href="presentation.html" data-il8n="presentation"><li>Présentation</li></a>
+                    <a href="competences.html" data-il8n="skills"><li>Compétences</li></a>
+                    <a href="projets.html" data-il8n="projects"><li>Projets</li></a>
+                    <a href="contact.html" data-il8n="contact"><li>Contact</li></a>
                 </ul>
             </nav>
             <label class="menu-mobile" for="checkbox">
@@ -50,13 +50,13 @@
             <h2>Get your reward below!</h2>
         </div>
     </div>
-    <div class="gif" style="width:500px;height:400px;padding-bottom:10px;position:relative;"><iframe src="https://giphy.com/embed/zwb4AvXN67p6SlvbIW" width="100%" height="100%" style="position:absolute" frameborder="0" class="giphy-embed" allowfullscreen></iframe></div>
+    <div class="gif" style="width:500px;height:400px;padding-bottom:10px;position:relative;"><iframe src="https://giphy.com/embed/zwb4AvXN67p6SlvbIW" width="100%" height="100%" style="position:absolute" frameborder="0" class="giphy-embed" allow="autoplay; fullscreen"></iframe></div>
 </main>
 
 <div class="button-container">
     <input type="checkbox" id="checkbox-reward">
     <div class="phone-number">
-        <p>Prendre un rendez-vous</p>
+        <p data-il8n="text-reward">Prendre un rendez-vous</p>
         <p>+33 7 84 93 52 48</p>
     </div>
     <label class="reward" for="checkbox-reward">
@@ -76,10 +76,15 @@
 </div>
 <footer>
     <h3>Emmanuel Ritzler - 2024</h3>
+    <div class="languages">
+        <a href="contact.html" id="english" onclick="changeLanguage('en')">EN</a>
+        <a href="contact.html" id="french" onclick="changeLanguage('fr')">FR</a>
+    </div>
     <div class="social-icons">
         <a href="https://www.linkedin.com/in/emmanuel-ritzler/" target="_blank"><img src="Images/linkedin.png" alt="Logo LinkedIn" aria-label="Logo LinkedIn"></a>
         <a href="https://github.com/emmanuelRitzler" target="_blank"><img src="Images/github.png" alt="Logo GitHub" aria-label="Logo GitHub"></a>
     </div>
+    <script src="switchLanguage.js" defer></script>
 </footer>
 <script src="./main.js"></script>
 </body>
