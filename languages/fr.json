@@ -10,7 +10,7 @@
     "title-skills": "Compétences",
     "display-cv": "AFFICHER LE CV",
     "title-project": "Projets",
-    "description-project-1": "Projet codé en HTML, CSS et rendu responsive à partir d'un modèle.",
+    "description-project-1": "Widget affichant l'heure, la position en temps réel ainsi qu'une citation à partir d'APIs.",
     "description-project-2": "Création d'une Landing Page pour un projet fictif nommé 'Fylo'.",
     "description-project-3": "Création d'une page de recette en méthode Mobile First.",
     "description-project-4": "Programme de vérification de la conformité de cartes bancaires écrit en JavaScript.",

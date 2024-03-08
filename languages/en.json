@@ -10,7 +10,7 @@
     "title-skills": "Skills",
     "display-cv": "DISPLAY CV",
     "title-project": "Projects",
-    "description-project-1": "Project coded with HTML, CSS and made responsive",
+    "description-project-1": "Widget displaying current time, location and a random quote through APIs",
     "description-project-2": "Landing page for a Front End Mentor project called Fylo",
     "description-project-3": "A simple recipe page made with mobile first approach",
     "description-project-4": "A programm for checking the authenticity of a credit card",
